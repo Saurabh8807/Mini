@@ -1,0 +1,589 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.navigation {
+    position: relative;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-link:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+    }
+    .nav-item {
+        margin: 0;
+        border-top: 1px solid #444;
+    }
+    .nav-link {
+        padding: 15px;
+    }
+}
+
+/* image slider */
+
+.banner_main {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.booking_online {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+    z-index: 10;
+}
+
+.book_room h1 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.online_book {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.book_btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.book_btn:hover {
+    background-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-width: 100%;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        font-size: 20px;
+    }
+
+    .booking_online {
+        width: 90%;
+    }
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+[class*="col-"] {
+    padding: 15px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+}
+.titlepage {
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 10px;
+    color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+/* animation */
+.titlepage::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.titlepage:hover::before {
+    width: 400%;
+    height: 400%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.titlepage h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(#f11000, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.about_img figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.about_img img {
+    width: 100%;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-5, .col-7 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about_img {
+        text-align: center;
+    }
+
+    .titlepage {
+        text-align: center;
+    }
+}
+
+/* rooms */
+.our_room {
+    padding: 60px 0;
+    background-color: #e9e5e5;
+}
+
+.our_room .titlepage {
+    text-align: center;
+}
+
+.our_room .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-4 {
+    flex: 0 0 32%;
+    max-width: 32%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    opacity: 0;
+
+}
+
+.room {
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room_img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.room_img figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.room:hover .room_img figure {
+    transform: scale(1.1);
+}
+
+.room_img img {
+    width: 100%;
+    display: block;
+}
+
+.bed_room {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.bed_room h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.bed_room p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+.our_room .row.visible .col-4 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay animation for each room */
+.col-4:nth-child(1) {
+    transition-delay: 0s;
+}
+.col-4:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.col-4:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.col-4:nth-child(4) {
+    transition-delay: 0.3s;
+}
+.col-4:nth-child(5) {
+    transition-delay: 0.4s;
+}
+.col-4:nth-child(6) {
+    transition-delay: 0.5s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+.gallery {
+    padding: 60px 0;
+    /* background-color: #e9e5e5; */
+    text-align: center;
+}
+
+.gallery_title {
+    margin-bottom: 30px;
+}
+
+.gallery_title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(#6e8efb, #a777e3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+.gallery_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.gallery_img {
+    flex: 0 0 32%;
+    max-width: 32%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery_img figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery_img figure img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.gallery_img:hover figure {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Up Animation */
+.gallery_content.visible .gallery_img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delay animation for each image */
+.gallery_img:nth-child(1) {
+    transition-delay: 0s;
+}
+.gallery_img:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.gallery_img:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.gallery_img:nth-child(4) {
+    transition-delay: 0.3s;
+}
+.gallery_img:nth-child(5) {
+    transition-delay: 0.4s;
+}
+.gallery_img:nth-child(6) {
+    transition-delay: 0.5s;
+}
+.gallery_img:nth-child(7) {
+    transition-delay: 0.6s;
+}
+.gallery_img:nth-child(8) {
+    transition-delay: 0.7s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .gallery_img {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery_img {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.blog {
+    padding: 60px 0;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+.blog::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent overlay */
+    z-index: 1;
+}
+
+.blog .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titlepage2 {
+    text-align: center;
+    padding: 50px 0;
+    left: 25vw;
+    z-index: 20;
+    top:10vh;
+    margin-bottom: 30px;
+    width: 30vw;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.titlepage2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+.titlepage2:hover::before {
+    width: 400%;
+    height: 400%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.titlepage2 h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(#ff0000, #050000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.titlepage2 h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #fff;
+    margin: 20px auto 0;
+}
+
+/* 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .blog .col-4 {
+        flex: 0 0 48%;
+        max-width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog .col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

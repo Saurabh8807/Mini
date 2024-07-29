@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Gallery</title>
+    <link rel="stylesheet" href="../css/rooms.css">
+</head>
+<body>
+    <header>
+        <div class="header2">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="../images/logo.png" alt="Logo"></a>
+                </div>
+                <nav class="navigation">
+                    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+                    <ul class="nav-list" id="nav-list">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/rooms.html">Our room</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/contact.html">Contact us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/services.html">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="image-container">
+        <img src="../images/rooms/imgSliderPhoto.jpg" class="card-img" alt="Your Perfect Stay In Mumbai">
+        <div>
+            <h5 class="card-title1">Your Perfect Stay In Mumbai</h5>
+        </div>
+    </div>
+    <div class="info-section">
+        <div class="rules-section">
+            <h2>Important Information</h2>
+            <ul class="rules">
+                <li>Kids up to Six (5) years are complimentary in parent’s room without extra bed.</li>
+                <li>Child from 7 yrs to 12 yrs can stay in the same room with an additional cost of Rs 1000.</li>
+                <li>Extra person would be charged as per the above.</li>
+                <li>Standard check-in time is 12:00 Noon and check-out time is 10:00 Morning.</li>
+                <li>Room tariff is on EP (Room Only) per day basis.</li>
+            </ul>
+            <h2>Document Required</h2>
+            <ul class="documents">
+                <li>For foreigners - foreign passports or Indian Visa</li>
+                <li>For Indians - Aadhar-Card, Driving License, Pan-card</li>
+            </ul>
+        </div>
+
+        <div class="booking-form-section">
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkin">Check-in Date:</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="checkout">Check-out Date:</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">Room Type:</label>
+                        <select id="roomType" name="roomType" required>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="superDeluxe">Super Deluxe Room</option>
+                            <option value="lakeViewDeluxe">Lake View Deluxe Room</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adults">Number of Adults:</label>
+                        <input type="number" id="adults" name="adults" min="1" max="4" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">Number of Children:</label>
+                        <input type="number" id="children" name="children" min="0" max="3">
+                    </div>
+                </div>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="rooms-section">
+        <div class="deluxediv">
+            <div class="header">
+                <h2>Deluxe Room</h2>
+                <p class="price">₹2500 / night</p>
+            </div>
+            <div class="photoGrid">
+                <img src="/images/rooms/deluxe/deluxe1.jpg" class="Lakeroom" alt=""/>
+                <img src="/images/rooms/deluxe/deluxe2.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe3.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe4.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe5.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe6.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe7.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe8.jpg" class="Lakeroom" alt="" />
+            </div>
+        </div>
+
+        <div class="superdiv">
+            <div class="header">
+                <h2>Super Deluxe Room</h2>
+                <p class="price">₹3000 / night</p>
+            </div>
+            <div class="photoGrid">
+                <img src="/images/rooms/super_deluxe/super_deluxe1.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe2.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe3.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe4.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe5.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe6.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe7.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/super_deluxe/super_deluxe8.jpg" class="Lakeroom" alt="" />
+            </div>
+        </div>
+      
+        <div class="lakediv">
+            <div class="header">
+                <h2>Lake View Deluxe Room</h2>
+                <p class="price">₹4000 / night</p>
+            </div>
+            <div class="photoGrid">
+                <img src="/images/rooms/deluxe/deluxe1.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe2.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe3.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe4.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe5.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe6.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe7.jpg" class="Lakeroom" alt="" />
+                <img src="/images/rooms/deluxe/deluxe8.jpg" class="Lakeroom" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/rooms.js"></script>
+</body>
+</html>
