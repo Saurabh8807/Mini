@@ -5,27 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Gallery</title>
     <link rel="stylesheet" href="css/rooms.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <header>
-        <div class="header2">
-            <div class="container">
-                <div class="logo">
-                    <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-                </div>
-                <nav class="navigation">
-                    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
-                    <ul class="nav-list" id="nav-list">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="rooms.html">Our room</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header></header>
     <div class="image-container">
         <img src="images/rooms/imgSliderPhoto.jpg" class="card-img" alt="Your Perfect Stay In Mumbai">
         <div>
@@ -55,105 +39,104 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" >
+                        <span id="nameError" class="error-message">Name is required</span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" >
+                        <span id="emailError" class="error-message">Please enter a valid email address</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                        <input type="tel" id="phone" name="phone">
+                        <span id="phoneError" class="error-message">Please enter a valid 10-digit phone number</span>
                     </div>
                     <div class="form-group">
                         <label for="checkin">Check-in Date:</label>
-                        <input type="date" id="checkin" name="checkin" required>
+                        <input type="date" id="checkin" name="checkin" >
+                        <span id="checkinError" class="error-message">Check-in date is required</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="checkout">Check-out Date:</label>
-                        <input type="date" id="checkout" name="checkout" required>
+                        <input type="date" id="checkout" name="checkout" >
+                        <span id="checkoutError" class="error-message">Check-out date is required</span>
                     </div>
                     <div class="form-group">
                         <label for="roomType">Room Type:</label>
-                        <select id="roomType" name="roomType" required>
+                        <select id="roomType" name="roomType" >
+                            <option value="">Select Room Type</option>
                             <option value="deluxe">Deluxe Room</option>
                             <option value="superDeluxe">Super Deluxe Room</option>
                             <option value="lakeViewDeluxe">Lake View Deluxe Room</option>
                         </select>
+                        <span id="roomTypeError" class="error-message">Room type is required</span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="adults">Number of Adults:</label>
-                        <input type="number" id="adults" name="adults" min="1" max="4" required>
+                        <input type="number" id="adults" name="adults" min="1" max="4" >
+                        <span id="adultsError" class="error-message">Number of adults is required</span>
                     </div>
                     <div class="form-group">
                         <label for="children">Number of Children:</label>
                         <input type="number" id="children" name="children" min="0" max="3">
+                        <span id="childrenError" class="error-message">Number of children is required if adults are present</span>
                     </div>
                 </div>
                 <button type="submit">Book Now</button>
             </form>
+            
         </div>
     </div>
 
     <div class="rooms-section">
         <div class="deluxediv">
-            <div class="header">
+            <div class="header2">
                 <h2>Deluxe Room</h2>
-                <p class="price">₹2500 / night</p>
-            </div>
-            <div class="photoGrid">
-                <img src="images/rooms/deluxe/deluxe1.jpg" class="Lakeroom" alt=""/>
-                <img src="images/rooms/deluxe/deluxe2.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe3.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe4.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe5.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe6.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe7.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe8.jpg" class="Lakeroom" alt="" />
-            </div>
-        </div>
-
-        <div class="superdiv">
-            <div class="header">
-                <h2>Super Deluxe Room</h2>
-                <p class="price">₹3000 / night</p>
-            </div>
-            <div class="photoGrid">
-                <img src="images/rooms/super_deluxe/super_deluxe1.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe2.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe3.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe4.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe5.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe6.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe7.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/super_deluxe/super_deluxe8.jpg" class="Lakeroom" alt="" />
-            </div>
-        </div>
-      
-        <div class="lakediv">
-            <div class="header">
-                <h2>Lake View Deluxe Room</h2>
-                <p class="price">₹4000 / night</p>
+                <p class="price">₹2500 /- night</p>
             </div>
             <div class="photoGrid">
                 <img src="images/rooms/deluxe/deluxe1.jpg" class="Lakeroom" alt="" />
                 <img src="images/rooms/deluxe/deluxe2.jpg" class="Lakeroom" alt="" />
                 <img src="images/rooms/deluxe/deluxe3.jpg" class="Lakeroom" alt="" />
                 <img src="images/rooms/deluxe/deluxe4.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe5.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe6.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe7.jpg" class="Lakeroom" alt="" />
-                <img src="images/rooms/deluxe/deluxe8.jpg" class="Lakeroom" alt="" />
+            </div>
+        </div>
+
+        <div class="superdiv">
+            <div class="header2">
+                <h2>Super Deluxe Room</h2>
+                <p class="price">₹3000 /- night</p>
+            </div>
+            <div class="photoGrid">
+                <img src="images/rooms/super_deluxe/super_deluxe1.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/super_deluxe/super_deluxe2.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/super_deluxe/super_deluxe3.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/super_deluxe/super_deluxe4.jpg" class="Lakeroom" alt="" />
+            </div>
+        </div>
+
+        <div class="lakediv">
+            <div class="header2">
+                <h2>Lake View Deluxe Room</h2>
+                <p class="price">₹4000 /- night</p>
+            </div>
+            <div class="photoGrid">
+                <img src="images/rooms/deluxe/deluxe1.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/deluxe/deluxe2.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/deluxe/deluxe3.jpg" class="Lakeroom" alt="" />
+                <img src="images/rooms/deluxe/deluxe4.jpg" class="Lakeroom" alt="" />
             </div>
         </div>
     </div>
-
-    <script src="/js/rooms.js"></script>
+    <footer></footer>
+    <script src="js/rooms.js"></script>
+    <script src="navbar.js"></script>
 </body>
 </html>

@@ -54,7 +54,6 @@ body {
     border-radius: 5px;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -78,7 +77,6 @@ body {
     }
 }
 
-/* image slider */
 
 .banner_main {
     position: relative;
@@ -175,7 +173,6 @@ body {
     background-color: #555;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .carousel-item {
         min-width: 100%;
@@ -203,7 +200,6 @@ body {
     padding: 15px;
 }
 
-/* About Section */
 .about {
     padding: 60px 0;
 }
@@ -218,7 +214,6 @@ body {
     overflow: hidden;
 }
 
-/* animation */
 .titlepage::before {
     content: '';
     position: absolute;
@@ -263,7 +258,6 @@ body {
     display: block;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .col-5, .col-7 {
         flex: 0 0 100%;
@@ -279,7 +273,6 @@ body {
     }
 }
 
-/* rooms */
 .our_room {
     padding: 60px 0;
     background-color: #e9e5e5;
@@ -355,7 +348,6 @@ body {
     transform: translateY(0);
 }
 
-/* Delay animation for each room */
 .col-4:nth-child(1) {
     transition-delay: 0s;
 }
@@ -375,7 +367,6 @@ body {
     transition-delay: 0.5s;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .col-4 {
         flex: 0 0 100%;
@@ -386,7 +377,6 @@ body {
 
 .gallery {
     padding: 60px 0;
-    /* background-color: #e9e5e5; */
     text-align: center;
 }
 
@@ -441,13 +431,11 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-in Up Animation */
 .gallery_content.visible .gallery_img {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Delay animation for each image */
 .gallery_img:nth-child(1) {
     transition-delay: 0s;
 }
@@ -473,7 +461,6 @@ body {
     transition-delay: 0.7s;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .gallery_img {
         flex: 0 0 48%;
@@ -504,7 +491,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Darker semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.7);  
     z-index: 1;
 }
 
@@ -572,8 +559,7 @@ body {
     margin: 20px auto 0;
 }
 
-/* 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     .blog .col-4 {
         flex: 0 0 48%;

@@ -1,17 +1,4 @@
-.header2 {
-    background-color: #363636;/* Gray background color */
-    padding: 10px 0;
-}
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
-}
 
 .image-container {
     position: relative;
@@ -22,12 +9,9 @@
 
 .card-img {
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
+ 
     top: 0;
     left: 0;
-    z-index: -1;
 }
 
 .card-title1 {
@@ -40,75 +24,11 @@
     color: #fae102;
     left: 37vw;
 }
-.logo {
-    flex: 1;
-}
 
-.logo img {
-    max-height: 50px;
-}
-
-.navigation {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.nav-toggle {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    margin-left: 20px;
-}
-
-.nav-link {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-}
-
-.nav-link:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block;
-    }
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        margin: 0;
-    }
-    .nav-item {
-        margin: 0;
-        border-top: 1px solid #444;
-    }
-    .nav-link {
-        padding: 15px;
-    }
-}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light background color for the entire page */
+    background-color: #f0f0f0; 
     margin: 0;
     padding: 0;
 }
@@ -122,12 +42,12 @@ body {
 }
 
 .rules-section, .booking-form-section {
-    background-color: #ffffff; /* Light background color */
+    background-color: #ffffff; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     flex: 1;
-    min-width: 300px; /* Ensures the sections do not become too narrow */
+    min-width: 300px; 
 }
 
 .rules-section h2, .booking-form-section h2 {
@@ -149,30 +69,32 @@ body {
 }
 
 .deluxediv, .superdiv, .lakediv {
-    background-color: #ffffff; /* Light background color for the boxes */
+    background-color: #ffffff;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.header {
-    background-color: #003cff; /* Dark background color for the heading */
+.header2 {
+    background-color: #003af7; 
     padding: 10px;
     border-radius: 10px 10px 0 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-size: larger;
+    color: white;
+    justify-content:space-around;
 }
 
-.header h2 {
-    color: #ffffff; /* Light color for the heading text */
+.header2 h2 {
+    color: #ffffff;
     margin: 0;
 }
 
-.header .price {
-    color: #ffffff; /* Light color for the price text */
+.header2 .price {
+    color: #ffffff; 
     margin: 0;
+    font-size: xx-large;
 }
 
 .photoGrid {
@@ -254,4 +176,9 @@ body {
     .form-row {
         flex-direction: column;
     }
+}
+
+.error-message {
+    color: red;
+    display: none;
 }

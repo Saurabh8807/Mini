@@ -74,20 +74,4 @@ document.addEventListener("DOMContentLoaded", function () {
     const galleryContent = document.querySelector('.gallery_content');
     observer.observe(galleryContent);
 });
-// document.addEventListener("DOMContentLoaded", function () {
-//     const observer = new IntersectionObserver(entries => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('visible');
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     }, {
-//         threshold: 0.1
-//     });
 
-//     const blogBoxes = document.querySelectorAll('.blog_box');
-//     blogBoxes.forEach(box => {
-//         observer.observe(box);
-//     });
-// });

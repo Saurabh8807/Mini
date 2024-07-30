@@ -50,7 +50,6 @@
     border-radius: 5px;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
@@ -208,7 +207,6 @@ body {
     max-width: 500px;
     height: auto;
 }
-
 .facilities-section {
     background: linear-gradient(135deg, #96aefa, #dabbff);
     text-align: center;
@@ -250,7 +248,7 @@ body {
 #booknow2 {
     display: block;
     margin: 20px auto;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     background-color: #d80909;
     color: #fff;
     border: none;

@@ -1,76 +1,91 @@
-document.getElementById('bookingForm').addEventListener('submit', function(event) {
-    let valid = true;
-    let formData = '';
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('bookingForm');
 
-    // Name validation
-    const name = document.getElementById('name').value;
-    if (name.trim() === '') {
-        valid = false;
-        alert('Name is required');
-    } else {
-        formData += `Name: ${name}\n`;
-    }
-
-    // Email validation
-    const email = document.getElementById('email').value;
-    if (email.trim() === '') {
-        valid = false;
-        alert('Email is required');
-    } else {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-            valid = false;
-            alert('Please enter a valid email address');
-        } else {
-            formData += `Email: ${email}\n`;
-        }
-    }
-
-    // Phone validation
-    const phone = document.getElementById('phone').value;
-    if (phone.trim() === '') {
-        valid = false;
-        alert('Phone number is required');
-    } else {
-        const phonePattern = /^[0-9]{10}$/;
-        if (!phonePattern.test(phone)) {
-            alert('Please enter a valid 10-digit phone number');
-            valid = false;
-        } else {
-            formData += `Phone: ${phone}\n`;
-        }
-    }
-
-    // Check-in and check-out date validation
-    const checkin = document.getElementById('checkin').value;
-    const checkout = document.getElementById('checkout').value;
-    if (checkin.trim() === '' || checkout.trim() === '') {
-        valid = false;
-        alert('Check-in and check-out dates are required');
-    } else if (new Date(checkin) >= new Date(checkout)) {
-        valid = false;
-        alert('Check-out date must be later than check-in date');
-    } else {
-        formData += `Check-in Date: ${checkin}\n`;
-        formData += `Check-out Date: ${checkout}\n`;
-    }
-
-    // Room Type
-    const roomType = document.getElementById('roomType').value;
-    formData += `Room Type: ${roomType}\n`;
-
-    // Number of Adults
-    const adults = document.getElementById('adults').value;
-    formData += `Number of Adults: ${adults}\n`;
-
-    // Number of Children
-    const children = document.getElementById('children').value;
-    formData += `Number of Children: ${children}\n`;
-
-    if (valid) {
-        // Show form data in an alert box for testing
-        alert(`Form Data:\n${formData}`);
-    } else {
+    form.addEventListener('submit', function(event) {
         event.preventDefault();
-    }
+        let valid = true;
+
+        // Name validation
+        const name = document.getElementById('name').value;
+        const nameError = document.getElementById('nameError');
+        if (name.trim() === '') {
+            nameError.style.display = 'inline';
+            valid = false;
+        } else {
+            nameError.style.display = 'none';
+        }
+        const email = document.getElementById('email').value;
+        const emailError = document.getElementById('emailError');
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.trim() === '' || !emailPattern.test(email)) {
+            emailError.style.display = 'inline';
+            valid = false;
+        } else {
+            emailError.style.display = 'none';
+        }
+
+        const phone = document.getElementById('phone').value;
+        const phoneError = document.getElementById('phoneError');
+        const phonePattern = /^[0-9]{10}$/;
+        if (phone.trim() === '' || !phonePattern.test(phone)) {
+            phoneError.style.display = 'inline';
+            valid = false;
+        } else {
+            phoneError.style.display = 'none';
+        }
+
+        const checkin = document.getElementById('checkin').value;
+        const checkout = document.getElementById('checkout').value;
+        const checkinError = document.getElementById('checkinError');
+        const checkoutError = document.getElementById('checkoutError');
+        if (checkin.trim() === '') {
+            checkinError.style.display = 'inline';
+            valid = false;
+        } else {
+            checkinError.style.display = 'none';
+        }
+        if (checkout.trim() === '') {
+            checkoutError.style.display = 'inline';
+            valid = false;
+        } else if (new Date(checkin) >= new Date(checkout)) {
+            checkoutError.textContent = 'Check-out date must be later than check-in date';
+            checkoutError.style.display = 'inline';
+            valid = false;
+        } else {
+            checkoutError.style.display = 'none';
+        }
+
+        const roomType = document.getElementById('roomType').value;
+        const roomTypeError = document.getElementById('roomTypeError');
+        if (roomType === '') {
+            roomTypeError.style.display = 'inline';
+            valid = false;
+        } else {
+            roomTypeError.style.display = 'none';
+        }
+
+        const adults = document.getElementById('adults').value;
+        const adultsError = document.getElementById('adultsError');
+        if (adults.trim() === '') {
+            adultsError.style.display = 'inline';
+            valid = false;
+        } else {
+            adultsError.style.display = 'none';
+        }
+
+        const children = document.getElementById('children').value;
+        const childrenError = document.getElementById('childrenError');
+        if (children.trim() === '' && adults.trim() !== '') {
+            childrenError.style.display = 'inline';
+            valid = false;
+        } else {
+            childrenError.style.display = 'none';
+        }
+
+        if (valid) {
+            let formData = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCheck-in Date: ${checkin}\nCheck-out Date: ${checkout}\nRoom Type: ${roomType}\nNumber of Adults: ${adults}\nNumber of Children: ${children}`;
+            alert(`Form Data:\n${formData}`);
+  
+        }
+    });
 });

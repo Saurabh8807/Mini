@@ -5,30 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navbar.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div class="container">
-                <div class="logo_section">
-                    <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
-                    </div>
-                </div>
-                <nav class="navigation">
-                    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
-                    <ul class="nav-list" id="nav-list">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="rooms.html">Our room</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+    <header></header>
     <main>
         <section class="contact-section">
             <div class="container">
@@ -67,11 +51,20 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="js/contact.js"></script>
+    <footer></footer>
+    <script src="navbar.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+                
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var message = $('#message').val();
+                
+                alert('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+            });
+        });
+    </script>
 </body>
 </html>
